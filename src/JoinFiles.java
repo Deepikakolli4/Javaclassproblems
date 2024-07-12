@@ -21,16 +21,13 @@ public class JoinFiles {
         System.out.println("saved to " + outputPath);
         System.out.println("Enter the number of lines you want: ");
         int number = input.nextInt();
-        System.out.println("Starting: ");
-        for(int i=0;i<number;i++){
+        System.out.println("First " + number + " lines:");
+        for (int i = 0; i < Math.min(number, resultLines.size()); i++) {
             System.out.println(resultLines.get(i));
         }
-        System.out.println("Ending: ");
-        if(number<=resultLines.size()) {
-            int start = resultLines.size() - number;
-            for (int i = start; i < resultLines.size(); i++) {
-                System.out.println(resultLines.get(i));
-            }
+        System.out.println("Last " + number + " lines:");
+        for (int i = Math.max(resultLines.size() - number, 0); i < resultLines.size(); i++) {
+            System.out.println(resultLines.get(i));
         }
     }
 }
