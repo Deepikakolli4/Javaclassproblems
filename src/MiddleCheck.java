@@ -6,6 +6,7 @@ class MiddleCheck {
     }
 
     public static boolean isCiaoCiaoInTheMiddle(String input) {
+        input=input.toLowerCase();
         String toCompare = "CiaoCiao".toLowerCase();
         if (input.length() < toCompare.length()) {
             return false;
