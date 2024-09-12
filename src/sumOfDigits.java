@@ -5,7 +5,7 @@ public class sumOfDigits {
         System.out.println(result);
     }
 
-    public static int addDigits(int num) {
+   public static int addDigits(int num) {
 //            while (num >= 10) {
 //                int sum = 0;
 //                while (num > 0) {
@@ -16,7 +16,7 @@ public class sumOfDigits {
 //            }
 //            return num;
 //        }
-            return (num-1)%9+1;
+                return (num-1)%9+1;
         }
     }
 
